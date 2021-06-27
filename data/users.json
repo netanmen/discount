@@ -21,6 +21,8 @@
         "frequencyPerDay": 1,
         "accountPermissions": [
             {
+                "id": "1",
+                "permissionStatus": "Active",
                 "scope": "balances",
                 "accountNumberIBAN": "IL540110920000153498542",
                 "openingBranch": "0092",
@@ -31,6 +33,8 @@
                 "managingBranch": "0092"
             },
             {
+                "id": "2",
+                "permissionStatus": "Active",
                 "scope": "transactions",
                 "accountNumberIBAN": "IL54011092000015542732",
                 "openingBranch": "0092",
@@ -64,6 +68,8 @@
         "frequencyPerDay": 1,
         "accountPermissions": [
             {
+                "id": "1",
+                "permissionStatus": "Active",
                 "scope": "balances",
                 "accountNumberIBAN": "IL540110920000153498542",
                 "openingBranch": "0092",
@@ -74,6 +80,8 @@
                 "managingBranch": "0092"
             },
             {
+                "id": "2",
+                "permissionStatus": "Active",
                 "scope": "transactions",
                 "accountNumberIBAN": "IL54011092000015542732",
                 "openingBranch": "0092",
@@ -107,6 +115,8 @@
         "frequencyPerDay": 1,
         "accountPermissions": [
             {
+                "id": "1",
+                "permissionStatus": "Active",
                 "scope": "balances",
                 "accountNumberIBAN": "IL540110920000153498542",
                 "openingBranch": "0092",
@@ -117,6 +127,8 @@
                 "managingBranch": "0092"
             },
             {
+                "id": "2",
+                "permissionStatus": "Active",
                 "scope": "transactions",
                 "accountNumberIBAN": "IL54011092000015542732",
                 "openingBranch": "0092",
