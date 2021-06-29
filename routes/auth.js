@@ -1,14 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const affiliates = require('../data/affiliates.json');
+const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const config = require('../config/config');
 
-router.post('/login', function (req, res, next) {
+const checkIsPasswordCorrect = async (password, hash) => {
+    if (!password || !hash) {
+        return false;
+    }
+
+    return await bcrypt.compare(password, hash);
+};
+
+router.post('/login', async (req, res, next) => {
     const { email, password } = req.body;
     const affiliate = affiliates.find(affiliate => affiliate.email === email);
 
-    if (!affiliate || affiliate.password !== password) {
+    const isPasswordCorrect = await checkIsPasswordCorrect(password, affiliate?.password);
+    if (!affiliate || !isPasswordCorrect) {
         res.sendStatus(401);
     }
 
