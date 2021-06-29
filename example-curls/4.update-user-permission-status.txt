@@ -1,0 +1,6 @@
+curl --location --request PUT 'https://localhost:3000/users/2/permissions/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXRhaWxzIjp7Im5hbWUiOiJUZXN0IEFmZmlsaWF0ZSJ9LCJpYXQiOjE2MjQ5NzM0MTAsImV4cCI6MTYyNTA1OTgxMCwic3ViIjoiMSJ9.Tf__O304e4902U3kFgMLA-bTHObM8rqISxwXTyxt214' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "permissionStatus": "Disabled"
+}'

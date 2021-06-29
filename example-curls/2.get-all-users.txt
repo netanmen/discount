@@ -1,0 +1,2 @@
+curl --location --request GET 'https://localhost:3000/users' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXRhaWxzIjp7Im5hbWUiOiJUZXN0IEFmZmlsaWF0ZSJ9LCJpYXQiOjE2MjQ5Njg1MzksImV4cCI6MTYyNTA1NDkzOSwic3ViIjoiMSJ9.QbyYfqXPWuxjGmuFBPnB6IF6-l9uOs_-uD73KObZhl8'

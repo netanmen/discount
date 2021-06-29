@@ -1,0 +1,7 @@
+curl --location --request POST 'https://localhost:3000/auth/login' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXRhaWxzIjp7Im5hbWUiOiJUZXN0IEFmZmlsaWF0ZSJ9LCJpYXQiOjE2MjQ5Njc1MjQsImV4cCI6MTYyNTA1MzkyNCwic3ViIjoiMSJ9.JM9BMWL0Hct_ztY2_a7kEf8CbQSmM-iQ219TK_TxJWs' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "sample.user@gmail.com",
+    "password": "pass123"
+}'
