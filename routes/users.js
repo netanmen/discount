@@ -13,14 +13,9 @@ router.get('/:id', function (req, res, next) {
   const { id } = req.params;
 
   const user = users.find(user => user.customerID === id);
-
-  res.send(user);
-});
-
-router.get('/:id', function (req, res, next) {
-  const { id } = req.params;
-
-  const user = users.find(user => user.customerID === id);
+  if (!user) {
+    res.statusCode(404);
+  }
 
   res.send(user);
 });
@@ -28,7 +23,12 @@ router.get('/:id', function (req, res, next) {
 router.delete('/:id', async (req, res, next) => {
   const { id } = req.params;
 
-  const updatedUsers = users.filter(user => user.customerID !== id);
+  const userToRemove = users.find(user => user.customerID === id);
+  if (!userToRemove) {
+    res.statusCode(404);
+  }
+  
+  const updatedUsers = users.filter(user => user.customerID !== userToRemove.customerID);
   await fs.writeFile(usersPath, JSON.stringify(updatedUsers, null, 4));
 
   res.sendStatus(204);
