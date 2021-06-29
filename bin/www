@@ -1,10 +1,16 @@
 const app = require('../app');
-const http = require('http');
+const https = require('https');
+const selfSigned = require('openssl-self-signed-certificate');
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-const server = http.createServer(app);
+const options = {
+  key: selfSigned.key,
+  cert: selfSigned.cert
+}
+
+const server = https.createServer(options, app);
 
 server.listen(port);
 server.on('error', onError);
