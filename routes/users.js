@@ -14,7 +14,7 @@ router.get('/:id', function (req, res, next) {
 
   const user = users.find(user => user.customerID === id);
   if (!user) {
-    res.statusCode(404);
+    res.sendStatus(404);
   }
 
   res.send(user);
@@ -25,7 +25,7 @@ router.delete('/:id', async (req, res, next) => {
 
   const userToRemove = users.find(user => user.customerID === id);
   if (!userToRemove) {
-    res.statusCode(404);
+    res.sendStatus(404);
   }
   
   const updatedUsers = users.filter(user => user.customerID !== userToRemove.customerID);
